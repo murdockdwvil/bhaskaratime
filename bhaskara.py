@@ -1,18 +1,11 @@
 import math
 
-valorA = int(input("Coloque o valor de A: "))
-valorB = int(input("Coloque o valor de B: "))
-valorC = int(input("Coloque o valor de C: "))
-
-deltaBhaskara = ((valorB ** 2) - 4 * valorA * valorC)
-print(deltaBhaskara)
-
-if (deltaBhaskara < 0):
-    print("Essa equação não possui raízes reais.")
-    
-if (deltaBhaskara == 0):
-    print("A raiz dessa equação é 0.")
-else:
-    print("As raízes dessa equação são: ", int((( -(valorB) + math.sqrt(deltaBhaskara)) / (2 * valorA))), "e", int(( - (valorB) - math.sqrt(deltaBhaskara) / (2 * valorA))))
-    
-
+def bhaskara(a,b,c):
+    delta =((b ** 2) - 4 * a * c)
+    if delta < 0:
+        bhaskara = False
+        print('Esta equação não possui raízes reais.')
+    else:
+        x1 = (- b + math.sqrt(delta) // 2 * a)
+        x2 = (- b - math.sqrt(delta) // 2 * a)
+        print ('As raízes da equação são', x1,'e',x2)
